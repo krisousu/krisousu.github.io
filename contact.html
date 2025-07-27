@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    a {
+      color: #88f;
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    #google_translate_element {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="google_translate_element"></div>
+
+  <h1>Contact</h1>
+  <p>You can reach me at <a href="mailto:krisousdev@gmail.com">krisousdev@gmail.com</a> or connect through:</p>
+  <ul>
+    <li><a href="https://youtube.com/@krisous1" target="_blank">YouTube @krisous1</a></li>
+    <li><a href="https://instagram.com/krisousdev" target="_blank">Instagram @krisousdev</a></li>
+    <li><a href="https://github.com/krisousu" target="_blank">GitHub @krisousu</a></li>
+  </ul>
+  <p><a href="index.html">← Back to Home</a></p>
+
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
