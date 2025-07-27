@@ -2,115 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Krisous | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krisous | Home</title>
   <style>
     body {
       margin: 0;
+      background: #111;
+      color: #fff;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #eee;
-      line-height: 1.6;
-    }
-    header {
-      background: #1f1f1f;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #444;
-      position: relative;
-    }
-    h1, h2 {
-      margin: 10px 0;
-    }
-    nav a {
-      color: #66f;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      border-top: 2px solid #444;
-      color: #999;
-      font-size: 0.9em;
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 40px;
     }
-    a {
-      color: #88f;
-    }
-    .pfp {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      animation: float 3s ease-in-out infinite;
+
+    .btn {
+      background: #222;
       border: 2px solid #444;
-      margin-top: 10px;
+      color: #88f;
+      padding: 15px 30px;
+      margin: 10px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.2s ease;
+      border-radius: 10px;
     }
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+
+    .btn:hover {
+      background: #333;
+      border-color: #66f;
+      color: #fff;
     }
+
     audio {
       display: none;
     }
+
     #google_translate_element {
       position: absolute;
       top: 20px;
       right: 20px;
-      z-index: 1000;
     }
   </style>
 </head>
 <body>
 
   <audio autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 
   <div id="google_translate_element"></div>
 
-  <header>
-    <img src="pfp.jpg" alt="Profile Picture" class="pfp" />
-    <h1>Krisous</h1>
-    <p>Music Enthusiast | Game Developer | 3D Animator</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <h1>ello!</h1>
+  <div>
+    <a href="about.html" class="btn">About Me</a>
+    <a href="contact.html" class="btn">Contact</a>
+  </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a music enthusiast who creates tracks both for others and myself. I'm also a game developer and 3D animator. I stream my work and content on YouTube.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>You can reach me at <a href="mailto:krisousdev@gmail.com">krisousdev@gmail.com</a> or connect through the following platforms:</p>
-    <ul style="list-style: none; padding: 0;">
-      <li><a href="https://youtube.com/@krisous1" target="_blank">YouTube @krisous1</a></li>
-      <li><a href="https://instagram.com/krisousdev" target="_blank">Instagram @krisousdev</a></li>
-      <li><a href="https://github.com/krisousu" target="_blank">GitHub @krisousu</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    &copy; 2025 Krisous. Hosted on GitHub Pages.
-  </footer>
-
-  <!-- Google Translate Script -->
+  <!-- Google Translate -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -119,10 +76,7 @@
       }, 'google_translate_element');
     }
   </script>
-  <script type="text/javascript"
-    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
-
