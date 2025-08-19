@@ -17,12 +17,10 @@
       height: 100vh;
       text-align: center;
     }
-
     h1 {
       font-size: 5rem;
       margin-bottom: 40px;
     }
-
     .btn {
       background: #222;
       border: 2px solid #444;
@@ -34,17 +32,14 @@
       transition: all 0.2s ease;
       border-radius: 10px;
     }
-
     .btn:hover {
       background: #333;
       border-color: #66f;
       color: #fff;
     }
-
     audio {
       display: none;
     }
-
     #google_translate_element {
       position: absolute;
       top: 20px;
@@ -53,10 +48,8 @@
   </style>
 </head>
 <body>
-
-  <audio autoplay loop>
+  <audio id="bg-music" loop>
     <source src="music.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
   </audio>
 
   <div id="google_translate_element"></div>
@@ -67,7 +60,6 @@
     <a href="contact.html" class="btn">Contact</a>
   </div>
 
-  <!-- Google Translate -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -78,5 +70,24 @@
   </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+  <script>
+    const audio = document.getElementById("bg-music");
+    let savedTime = localStorage.getItem("music-time");
+    if (savedTime) {
+      audio.currentTime = parseFloat(savedTime);
+    }
+    let wasPlaying = localStorage.getItem("music-playing");
+    if (wasPlaying === "true") {
+      audio.play().catch(() => {
+        document.body.addEventListener("click", () => {
+          audio.play();
+        }, { once: true });
+      });
+    }
+    window.addEventListener("beforeunload", () => {
+      localStorage.setItem("music-time", audio.currentTime);
+      localStorage.setItem("music-playing", !audio.paused);
+    });
+  </script>
 </body>
 </html>
